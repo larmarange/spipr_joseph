@@ -1,0 +1,11 @@
+<BOUCLE_content(MOTS) {id_mot} {doublons}>
+<section>
+
+  <header class="cartouche">
+	  <p class="surtitre">Tag</p>
+      <h1 class="#EDIT{titre}">[(#LOGO_MOT|image_reduire)]<span class="label"><i class="icon-tag"></i> #TITRE</span></h1>
+  </header>
+</section>
+</BOUCLE_content>
+
+<INCLURE{fond=liste/articles-resume, env, ajax} />

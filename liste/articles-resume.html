@@ -1,0 +1,15 @@
+<B_articles>
+	<BOUCLE_articles(ARTICLES){id_rubrique?}{id_mot?}{!par date}{!id_article IN #ENV{articles_exclus,#ARRAY}} {pagination #ENV{nb, 10}}>
+	[(#COMPTEUR_BOUCLE|plus{10}|=={#ENV{nb}}|oui)<a id="more"></a>]
+	[(#COMPTEUR_BOUCLE|<={#ENV{first, 0}}|oui)#INCLURE{fond=inclure/resume/article_first,id_article}]
+	[(#COMPTEUR_BOUCLE|>{#ENV{first, 0}}|oui)#INCLURE{fond=inclure/resume/article,id_article}]
+	</BOUCLE_articles>
+	[(#TOTAL_BOUCLE|>={#ENV{nb, 10}}|oui)
+		<div class="load-more-btn wow fadeInUp" data-wow-delay="0s" data-wow-duration="1000ms" style="visibility: visible; animation-duration: 1000ms; animation-delay: 0s; animation-name: fadeInUp;">
+			<a href="[(#SELF|parametre_url{nb,[(#ENV{nb, 10}|plus{10})]})#more]" class="btn original-btn ajax">Plus</a>
+		</div>
+	]
+</B_articles>
+
+
+

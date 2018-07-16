@@ -1,0 +1,20 @@
+[(#CONFIG{zotspip/page_biblio}|oui)
+
+#SET{selection,#ARRAY{}}
+[(#ENV{auteur}|oui)#SET{selection,#GET{selection}|push{#ENV{auteur}}}]
+[(#ENV{annee}|oui)#SET{selection,#GET{selection}|push{#ENV{annee}}}]
+[(#ENV{recherche}|oui)#SET{selection,#GET{selection}|push{#ENV{recherche}}}]
+[(#ENV{type_ref}|oui)#SET{selection,#GET{selection}|push{#ENV{type_ref}|zotspip_traduire_type}}]
+[(#ENV{tag}|oui)#SET{selection,#GET{selection}|push{#ENV{tag}}}]
+[(#ENV{zcollection}|oui)#SET{selection,#GET{selection}|push{#ENV{zcollection}}}]
+
+<article>
+	<header class="cartouche">
+		[<h1>(#CONFIG{zotspip/titre_page_biblio}|typo|sinon{<:zotspip:titre_page_biblio:>})</h1>]
+		[<p class="soustitre">(#GET{selection}|implode{', '}).</p>]
+	</header>
+</article>
+
+[(#INCLURE{fond=modeles/biblio_#ENV{tri,annee},env, ajax}|sinon{<:zotspip:aucune_reference:>})]
+
+]

@@ -1,0 +1,17 @@
+<BOUCLE_resume_document(DOCUMENTS) {id_document} {statut?}>
+<article class="entry document spip_doc[ (#EXTENSION|attribut_html)]">
+	<div>
+		<a href="#URL_DOCUMENT" rel="bookmark" type="#MIME_TYPE" title="<:bouton_download:> [(#TYPE_DOCUMENT) - ][(#TAILLE|taille_en_octets)]" >
+		[(#LOGO_DOCUMENT)]
+		</a>
+	</div>
+	<div>
+		<a href="#URL_DOCUMENT" rel="bookmark" type="#MIME_TYPE" title="<:bouton_download:> [(#TYPE_DOCUMENT) - ][(#TAILLE|taille_en_octets)]" >
+			[(#TITRE|sinon{#FICHIER|basename|couper{80}})]
+		</a><br />
+		[<time pubdate="pubdate" datetime="[(#DATE|date_iso)]">(#DATE|affdate_jourcourt)</time>]
+		<span class="type"><span class="sep"> - </span>[(#TYPE_DOCUMENT)]</span><span class="poids"><span class="sep"> - </span>[(#TAILLE|taille_en_octets)]</span>
+		[<br /><span class="#EDIT{descriptif}">(#DESCRIPTIF|couper{#ENV{coupe,300}})</span>]
+	</div>
+</article>
+</BOUCLE_resume_document>

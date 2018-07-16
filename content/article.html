@@ -1,0 +1,31 @@
+<BOUCLE_content(ARTICLES){id_article}>
+<article>
+	<header class="cartouche">
+		[<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
+		[<h1 class="#EDIT{titre}">(#TITRE)</h1>]
+		[<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
+
+		<p class="publication">
+			<span class="category"><a href="#INFO_URL{rubrique, #ID_RUBRIQUE}">#INFO_TITRE{rubrique,#ID_RUBRIQUE}</a></span>
+			<time pubdate="pubdate" datetime="[(#DATE|date_iso)]">[(#DATE|nom_jour|ucfirst) ][(#DATE|affdate)]</time>
+		</p>
+		<div class="logo-article element-animate fadeIn element-animated" data-animate-effect="fadeIn" style="background-image: url([(#LOGO_ARTICLE_RUBRIQUE|image_recadre{3:1,-,focus}|image_reduire{2000}|extraire_attribut{src})]);"></div>
+	</header>
+	
+	<div class="main">
+		[<div class="#EDIT{chapo} chapo surlignable">(#CHAPO)</div>]
+		[<div class="#EDIT{texte} texte surlignable">(#TEXTE)</div>]
+	</div>
+
+	<footer>
+		[<div class="#EDIT{ps} ps surlignable">(#PS)</div>]
+		[<p class="#EDIT{hyperlien} hyperlien"><strong><:voir_en_ligne:> :</strong> <a href="(#URL_SITE)" class="spip_out">[(#NOM_SITE|sinon{[(#URL_SITE|couper{150})]})]</a></p>]
+		[<div class="notes"><h2><:info_notes:></h2>(#NOTES)</div>]
+	</footer>
+
+	<aside>
+		[(#REM) Gestion du portfolio et des documents ]
+		[(#INCLURE{fond=inclure/documents,id_article})]
+	</aside>
+</article>
+</BOUCLE_content>

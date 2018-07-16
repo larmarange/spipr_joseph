@@ -1,0 +1,14 @@
+<BOUCLE_content(RUBRIQUES){id_rubrique}>
+<article>
+	<header class="cartouche">
+		<p class="surtitre">Catégorie</p>
+		[<h1 class="#EDIT{titre}">(#TITRE)</h1>]
+	</header>
+	
+	<div class="main">
+		[<div class="#EDIT{texte} texte surlignable">(#TEXTE)</div>]
+	</div>
+</article>
+</BOUCLE_content>
+
+<INCLURE{fond=liste/articles-resume, first=1, env, ajax} />

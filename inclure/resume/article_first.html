@@ -1,0 +1,20 @@
+<BOUCLE_articles(ARTICLES) {id_article} {statut?}>
+<div class="post-entry-first align-items-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url([(#LOGO_ARTICLE_RUBRIQUE|image_recadre{16:9,-,focus}|image_reduire{2000}|extraire_attribut{src})]);">
+	<div class="cell">
+	<div class="text half-to-full">
+		<a href="#URL_ARTICLE">
+	    [<p class="surtitre">(#SURTITRE)</p>]
+		[<h2>(#TITRE)</h2>]
+		[<p class="soustitre">(#SOUSTITRE)</p>]
+		</a>
+		
+		<p class="publication">
+			<span class="category"><a href="#INFO_URL{rubrique, #ID_RUBRIQUE}">#INFO_TITRE{rubrique,#ID_RUBRIQUE}</a></span>
+			<time pubdate="pubdate" datetime="[(#DATE|date_iso)]">[(#DATE|nom_jour|ucfirst) ][(#DATE|affdate)]</time>
+		</p>
+	</div>
+	</div>
+</div>
+</BOUCLE_articles>
+
+

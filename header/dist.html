@@ -1,0 +1,53 @@
+<!-- Logo Area -->
+[<div class="logo-area text-center">
+	<div class="container h-100">
+		<div class="row h-100 align-items-center">
+			<div class="col-12">
+				<a href="(#URL_SITE_SPIP)" class="original-logo">#LOGO_SITE_SPIP</a>
+			</div>
+		</div>
+	</div>
+</div>]
+
+<!-- Nav Area -->
+<div class="original-nav-area" id="stickyNav">
+	<div class="classy-nav-container breakpoint-off">
+		<div class="container">
+			<!-- Classy Menu -->
+			<nav class="classy-navbar justify-content-between">
+
+
+				<!-- Navbar Toggler -->
+				<div class="classy-navbar-toggler">
+					<span class="navbarToggler"><span></span><span></span><span></span></span>
+				</div>
+
+				<!-- Menu -->
+				<div class="classy-menu" id="originalNav">
+					<!-- close btn -->
+					<div class="classycloseIcon">
+						<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+					</div>
+
+					<!-- Nav Start -->
+					<div class="classynav">
+						#INCLURE{fond=inclure/menu, env, identifiant=barrenav}				
+						<!-- Search Form  -->
+						<div id="search-wrapper">
+							<form action="#URL_PAGE{recherche}" method="get">
+								<input type="hidden" name="page" value="recherche" />
+								<input type="text" id="search" name="recherche" placeholder="rechercher ..." />
+								<div id="close-icon"></div>
+								<input class="d-none" type="submit" value="">
+							</form>
+						</div>
+					</div>
+					<!-- Nav End -->
+				</div>
+				[<div id="navbar-logo">
+					<a href="(#URL_SITE_SPIP)" class="original-logo">#LOGO_SITE_SPIP</a>
+				</div>]
+			</nav>
+		</div>
+	</div>
+</div>

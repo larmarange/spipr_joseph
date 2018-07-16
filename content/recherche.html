@@ -1,0 +1,11 @@
+<article>
+	<header class="cartouche">
+		<form action="#URL_PAGE{recherche}" method="get" id="formulaire_recherche">
+		<input type="hidden" name="page" value="recherche" />
+		<input type="text" id="recherche" name="recherche" value="#ENV{recherche}" />
+		<input class="btn original-btn" type="submit" value="Rechercher">
+		</form>
+	</header>
+</article>
+
+<INCLURE{fond=liste/articles-recherche, nb=10, env, ajax} />
