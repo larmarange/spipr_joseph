@@ -1,7 +1,4 @@
 /* :: Import Styles and Fonts */
-@import url(bootstrap.min.css);
-@import url(classy-nav.css);
-@import url(animate.css);
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto:400,400i,700');
 
 * {
