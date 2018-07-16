@@ -757,6 +757,7 @@ h5, h5.h5, .h5 {
 }
 
 .post-entry-horizontal h2, .post-entry-first h2 {
+	margin-top: 10px;
 	font-family: "Roboto Condensed", sans-serif;
 	color: black;
 	font-size: 1.5em;
