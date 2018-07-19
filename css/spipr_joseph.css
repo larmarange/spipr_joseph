@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0; }
 
-ul,ol{padding: 30px;}
+ul.spip, ol.spip {padding: 30px;}
   
 body {
   font-family: 'Roboto', sans-serif;
@@ -648,7 +648,7 @@ h5, h5.h5, .h5 {
   color: #ffffff;
 }
 
-.bio ul.social {text-align: left;}
+.bio ul.social {text-align: left; list-style: none;}
 .bio ul.social img {max-width: 24px; max-height:24px; border-radius: 0; margin: 0;}
 .bio ul.social li {margin: 10px;}
 .bio ul.social a {color: #4f4d4d;}
