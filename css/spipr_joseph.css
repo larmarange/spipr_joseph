@@ -5,6 +5,8 @@
   margin: 0;
   padding: 0; }
 
+ul,ol{padding: 30px;}
+  
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #ffffff; }
