@@ -693,6 +693,8 @@ h5, h5.h5, .h5 {
 .spip_doc_descriptif{clear:both;margin-right:auto;margin-left:auto;font-size:.90em}
 .spip_modele{float:right;display:block;padding:1em;border:1px solid;width:180px}
 
+.documents_joints ul.liste-items {list-style: none;}
+
 /* Liste articles */
 
 .post-entry-horizontal {
