@@ -1,0 +1,24 @@
+<article>
+	<header class="cartouche">
+		<h1 class="">Catégories</h1>
+	</header>
+</article>
+
+<B_rubriques>
+	<BOUCLE_rubriques(RUBRIQUES){id_rubrique?}{id_mot?}{par num titre}>
+	<div class="post-entry-horizontal">
+	<div class="image" style="background-image: url([(#LOGO_RUBRIQUE|image_recadre{4:3,-,focus}|image_reduire{600}|extraire_attribut{src})]);"></div>
+	<div class="text">
+		<a href="#URL_RUBRIQUE">
+		[<h2>(#TITRE)</h2>]
+		</a>
+		
+		<p class="publication">
+			<BOUCLE_art(ARTICLES){id_rubrique}> </BOUCLE_art>
+				<span class="category"><a href="#URL_RUBRIQUE">[(#TOTAL_BOUCLE) entrées]</a></span>
+			</B_art>
+		</p>
+	</div>
+</div>
+	</BOUCLE_rubriques>
+</B_rubriques>
