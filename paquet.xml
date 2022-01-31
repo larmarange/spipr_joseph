@@ -15,4 +15,5 @@
 	<necessite nom="Zcore" compatibilite="[2.5.0;[" />
 	<necessite nom="centre_image" />
 	<utilise nom="zotspip" />
+	<necessite nom="jqueryui" />
 </paquet>
