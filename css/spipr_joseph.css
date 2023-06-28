@@ -1736,3 +1736,29 @@ h5, h5.h5, .h5 {
   margin-right: 15px; }
 
 /*# sourceMappingURL=classy-nav.css.map */
+
+/* HAL */
+
+.hal-titre-heading {
+	font-size: 1.1em !important;
+	font-weight: bold !important;
+}
+
+div.hal-resultat {
+	margin-bottom: 10px;
+	border: 1px solid #dcdcdc;
+	background-color: #eeeeee;
+	padding: 10px;
+}
+
+.hal-resultat:last-child {
+	border: 1px solid #dcdcdc;
+}
+
+div.hal-thumb:empty {
+	display: none;
+}
+
+div.hal-thumb img {
+	background-color: white;
+}
